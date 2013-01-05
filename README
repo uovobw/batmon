@@ -1,0 +1,6 @@
+Batmon is a tiny script that will monitor the state of the battery using
+acpitool. It has the path hardcoded but as it is intended mainly for personal use i
+did not fix it yet.
+Requires:
+- python GTK
+- python Gobject
