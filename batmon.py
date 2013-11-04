@@ -27,6 +27,9 @@ def get_battery(out):
 def is_charging(out):
     return out.__contains__(" charging") or out.__contains__(" Charging")
 
+def is_missing(out):
+    return out.__contains__("not available")
+
 def check_for_new():
     global loadingtray
     global tray
@@ -39,6 +42,9 @@ def check_for_new():
         loadingtray.set_visible(True)
     else:
         loadingtray.set_visible(False)
+
+    if is_missing(acpiToolOut):
+        return True
 
     value = get_battery(acpiToolOut)
     if value <= WARNING_LEVEL:
