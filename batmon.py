@@ -47,7 +47,7 @@ def check_for_new():
         return True
 
     value = get_battery(acpiToolOut)
-    if value <= WARNING_LEVEL:
+    if value <= WARNING_LEVEL and not is_charging(acpiToolOut):
         if counter == 10:
             counter = 0
             okdialog = gtk.MessageDialog(type=gtk.MESSAGE_OTHER)
