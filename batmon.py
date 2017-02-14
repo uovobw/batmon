@@ -9,7 +9,7 @@ from datetime import datetime
 basepath = "/home/uovobw/programmi/batmon"
 tray = gtk.status_icon_new_from_file(basepath + "/icons/batmon0.png")
 loadingtray = gtk.status_icon_new_from_file(basepath + "/icons/charging.png")
-delay = 10000
+delay = 5000
 WARNING_LEVEL = 10
 okbutton = None
 counter = 0
